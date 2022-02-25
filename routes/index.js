@@ -32,8 +32,8 @@ router.get('/item/delete/:id', addUserToViews, redirectGuests, todoController.de
 router.get('/item/complete/:id', addUserToViews, redirectGuests, todoController.makeItemComplete);
 router.get('/item/incomplete/:id', addUserToViews, redirectGuests, todoController.markItemIncomplete);
 
-router.get('/register', addUserToViews, redirectGuests, userController.renderRegistration);
-router.post('/register', addUserToViews, redirectGuests, userController.register);
+router.get('/register', addUserToViews, userController.renderRegistration);
+router.post('/register', addUserToViews, userController.register);
 
 router.get('/login', addUserToViews, userController.renderLogin);
 router.post('/login', addUserToViews, userController.authenticate);

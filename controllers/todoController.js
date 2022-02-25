@@ -60,6 +60,7 @@ module.exports.saveEditItem = async function(req, res) {
     res.redirect('/');
 };
 
+
 module.exports.deleteItem = async function(req, res) {
     await Todo.destroy({
         where: {
